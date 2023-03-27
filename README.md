@@ -12,7 +12,7 @@ Author: Ionel Tudor Cristian Lacatus   uvus:HPD8118
     
 ## *Structure of the DATASET*
 
-This dateset is focused on to analyze the information of a finantial app that has recolected information of its users (anonysmously), and wants to sell this information to others companies.
+This dateset is focused on to analyze the information of a finantial app which has gathered information from its users, and wants to sell this information to others companies.
 The original dataset can be found in the following link -> "https://www.kaggle.com/datasets/overload10/adult-census-dataset".
 This dataset has 11 columns and 32562 rows, also, the dataset was modified in order to add a wider variety of parameters, and to delete some irrelevant data. Now, we will describe each column:
 
