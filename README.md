@@ -71,6 +71,7 @@ Base type
 - SalaryPerHour, class. Computes the salary per hour of a user.
 - Socialclass, enumerated. Contains the social class of a user based on the salary that he makes. Can take the following values: LOWER, WORKING, MIDDLE, UPPER
 
+ 
 ### Factory - AdultFactory
 Factory class, which creates objects of type Adults.
 
@@ -80,6 +81,7 @@ Factory class, which creates objects of type Adults.
 
 -_List<Others> parseOthers(String oth)_ and _Others parseOther(String oth)_: Parses the list in the file
 
+ 
 ### Container Type - Adults
 Container type of objects of type Adult.
 
