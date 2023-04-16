@@ -19,7 +19,7 @@ This dataset has 12 columns and 32562 rows, also, the dataset was modified in or
 * **username**: of type string, indicates the username of an user
 * **country**: of type string, indicates the country of an user
 * **dateOfbirth**: of type date. Indicates the date of birth of an user 
-* **workclass. of type string. Indicates the workclass of an user
+* **workclass**. of type string. Indicates the workclass of an user
 * **education**: of type string. Indicates the maximum education that has achieved an user
 * **maritalStatus**: of type string. Indicates ther marital status of a user
 * **sex**: of type string. Indicates sex of a user
