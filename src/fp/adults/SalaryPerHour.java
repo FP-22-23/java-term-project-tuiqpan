@@ -17,7 +17,7 @@ public class SalaryPerHour implements Comparable<SalaryPerHour>{
 	
 	public SalaryPerHour(Integer income, Double hours) {
 		Checkers.check("Salary must be more than 0$", income>0);
-		Checkers.check("Hours must be greater than 0 and less or equal to 40", (hours < 40 && hours >= 0));
+		Checkers.check("Hours must be greater than 0 and less or equal to 40", (hours <= 40 && hours >= 0));
 		this.salary = income;
 		this.hours = hours;
 		
@@ -46,23 +46,9 @@ public class SalaryPerHour implements Comparable<SalaryPerHour>{
 		this.hours = hours;
 	}
 	
-	public SocialClass getSocialClass() {
-		if(getSalary()<500) {
-			return SocialClass.LOWER;
-		}
-		else if (getSalary()<1300) {
-			return SocialClass.WORKING;
-		}
-		else if (getSalary()<2000) {
-			return SocialClass.MIDDLE;
-		}
-		else {
-			return SocialClass.UPPER;
-		}
-	}
-	
 	public Double getIncomePerHour() {
-		return (getSalary()/4)/getHours();
+	    double income = (getSalary() / 4) / getHours();
+	    return Math.round(income * 100.0) / 100.0;
 	}
 	
 	//HASHCODE AND EQUALS
@@ -87,8 +73,7 @@ public class SalaryPerHour implements Comparable<SalaryPerHour>{
 	
 	
 	//COMPARETO
-	
-	@Override
+
 	public int compareTo(SalaryPerHour o) {
 		int res;
 		res = this.getSalary().compareTo(o.getSalary());
@@ -103,7 +88,7 @@ public class SalaryPerHour implements Comparable<SalaryPerHour>{
 	
 	@Override
 	public String toString() {
-		return "salaryPerHour=" + getIncomePerHour();
+		return "Salary per hour=" + getIncomePerHour();
 	}
 	
 	

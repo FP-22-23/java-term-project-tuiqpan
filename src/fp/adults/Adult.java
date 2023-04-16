@@ -10,29 +10,29 @@ public class Adult implements Comparable<Adult>{
 	
 	
 	//ATTRIBUTES
-	
 	private LocalDate dateOfBirth;
-	private String workclass, education, maritalStatus, sex, country ;
+	private String  username, workclass, education, maritalStatus, sex, country ;
 	private Integer savings, salary;
 	private Boolean mortgage;
 	private List<Others> others;
 	private SalaryPerHour salaryPerHour;
 	
 	
-	//CONSTRUCTOR
-	
-	public Adult(String country, LocalDate dateOfBirth, String workclass, String education, String maritalStatus, String sex,
+	//CONSTRUCTORS
+	public Adult(String username, LocalDate dateOfBirth, String workclass, String education, String maritalStatus, String sex, String country,
 			Boolean mortgage, Integer savings, Integer salary, SalaryPerHour salaryPerHour, List<Others> others) {
 
 		Checkers.check("Savings must be more than 0$", savings>0);
 		Checkers.check("The date of birth must be after (1960, 1, 1) and before (2000, 1, 1)", 
 				dateOfBirth.isAfter(LocalDate.of(1960, 1, 1)) && dateOfBirth.isBefore(LocalDate.of(2000, 1, 1)));
 		
+		this.username = username;
 		this.dateOfBirth = dateOfBirth;
 		this.workclass = workclass;
 		this.education = education;
 		this.maritalStatus = maritalStatus;
 		this.sex = sex;
+		this.country = country;
 		this.mortgage = mortgage;
 		this.savings = savings;
 		this.salary = salary;
@@ -40,13 +40,20 @@ public class Adult implements Comparable<Adult>{
 		this.others = others;
 	}
 
-	public Adult(LocalDate dateOfBirth, Integer savings, Integer salary, SalaryPerHour salaryPerHour) {
+	public Adult(String username,LocalDate dateOfBirth, Integer savings, Integer salary, SalaryPerHour salaryPerHour ) {
+
+		Checkers.check("Savings must be more than 0$", savings>0);
+		Checkers.check("The date of birth must be after (1960, 1, 1) and before (2000, 1, 1)",
+				dateOfBirth.isAfter(LocalDate.of(1960, 1, 1)) && dateOfBirth.isBefore(LocalDate.of(2000, 1, 1)));
 		
+		
+		this.username = username;
 		this.dateOfBirth = dateOfBirth;
 		this.workclass = "Unknown";
 		this.education = "Unknown";
 		this.maritalStatus = "Unknown";
 		this.sex = "Unknown";
+		this.country = "Unknown";
 		this.mortgage = null;
 		this.savings = savings;
 		this.salary = salary;
@@ -56,16 +63,15 @@ public class Adult implements Comparable<Adult>{
 	
 
 	//TOSTRING
-	
 	@Override
 	public String toString() {
-		return "Adult [Age=" + getAge() + ", workclass=" + workclass + ", education=" + education + ", maritalStatus=" + maritalStatus
-				+ ", sex=" + sex + ", country=" + country + ", savings=" + savings + ", salary=" + salary +", mortgage=" + mortgage
-				+ ", others=" + others +  ", "+ salaryPerHour + "]";
+		return "Adult [Username="+username+", Age=" + getAge() + ", Workclass=" + workclass + ", Education=" + education + ", MaritalStatus=" + maritalStatus
+				+ ", Sex=" + sex + ", Country=" + country + ", Savings=" + savings +
+				", Salary=" + salary +  ", "+ salaryPerHour + ", Mortgage=" + mortgage+ ", Others=" + others + " Social class= " + getSocialClass()+ "]" ;
 	}
 	
+	
 	//GETTERS AND SETTERS
-
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
@@ -73,13 +79,13 @@ public class Adult implements Comparable<Adult>{
 	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	
-	public SalaryPerHour getSalaryPerHour() {
-		return salaryPerHour;
+
+	public String getUsername() {
+		return username;
 	}
 
-	public void setSalaryPerHour(SalaryPerHour salaryPerHour) {
-		this.salaryPerHour = salaryPerHour;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getWorkclass() {
@@ -153,56 +159,65 @@ public class Adult implements Comparable<Adult>{
 	public void setOthers(List<Others> others) {
 		this.others = others;
 	}
+
+	public SalaryPerHour getSalaryPerHour() {
+		return salaryPerHour;
+	}
+
+	public void setSalaryPerHour(SalaryPerHour salaryPerHour) {
+		this.salaryPerHour = salaryPerHour;
+	}
 	
 	
 	//DERIVED PROPERTIES
-	
 	public Integer getAge() {
 		return getDateOfBirth().until(LocalDate.now()).getYears();
 	}
 	
+	public SocialClass getSocialClass() {
+		if(getSalary()<500) {
+			return SocialClass.LOWER;
+		}
+		else if (getSalary()<1300) {
+			return SocialClass.WORKING;
+		}
+		else if (getSalary()<2000) {
+			return SocialClass.MIDDLE;
+		}
+		else {
+			return SocialClass.UPPER;
+		}
+	}
+	
 	
 	//HASHCODE AND EQUALS
-
 	@Override
 	public int hashCode() {
-		return Objects.hash(country, education, maritalStatus, mortgage, others, salary, salaryPerHour, savings, sex,
-				workclass);
+		return Objects.hash(country, dateOfBirth, education, sex);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if (!(obj instanceof Adult))
 			return false;
 		Adult other = (Adult) obj;
-		return Objects.equals(country, other.country) && Objects.equals(education, other.education)
-				&& Objects.equals(maritalStatus, other.maritalStatus) && Objects.equals(mortgage, other.mortgage)
-				&& Objects.equals(others, other.others) && Objects.equals(salary, other.salary)
-				&& Objects.equals(salaryPerHour, other.salaryPerHour) && Objects.equals(savings, other.savings)
-				&& Objects.equals(sex, other.sex) && Objects.equals(workclass, other.workclass);
+		return Objects.equals(country, other.country) && Objects.equals(dateOfBirth, other.dateOfBirth)
+				&& Objects.equals(education, other.education) && Objects.equals(sex, other.sex);
 	}
 	
 
 	//COMPARE TO AND NATURAL ORDER
-	
 	public int compareTo(Adult s) {
-		int res;
-		res = this.getSalaryPerHour().compareTo(s.getSalaryPerHour());
-		if (res == 0) {
-			res = this.getAge().compareTo(s.getAge());
-			if(res==0) {
-				res = this.getSalaryPerHour().compareTo(s.getSalaryPerHour());
-				if(res==0) {
-					res = this.getSalary().compareTo(s.getSalary());
-				}
+		int res = 0;
+		if(res==0) {
+			res = this.getSalary().compareTo(s.getSalary());
+			if(res==0){
+				res = this.getSavings().compareTo(s.getSavings());
 			}
 		}
-		
-		return res;
+	return res;
 	}
 
 
