@@ -43,7 +43,7 @@ Base type
 - _savings_, _salary_ of type Integer, consultable and modifiable.
 - _others_, of type List<Others>, consultable and modifiable.
 - _mortgage_, of type Boolean, consultable and modifiable.
-- _salaryPerHour_, of type SalaryPerHour, consultable. Indicates the salary per hour of a user.
+- _salaryPerHour_, of type SalaryPerHour, consultable and modifiable. Indicates the salary per hour of a user.
 
 **Constructors**: 
 
@@ -57,8 +57,8 @@ Base type
 
 **Equality and Ordenation**
 
-* ***Equality criterion***: Two users are the same if the have the same salary per hour, the same education, the same marital status, and they live in the same country.
-* ***Natural order***: By age and salary.
+* ***Equality criterion***: Two users are the same if they have the same username, the same sex, and the same date of birth.
+* ***Natural order***: By salary and savings.
 
 **Other operations**:
 
@@ -67,7 +67,7 @@ Base type
 
 #### Auxiliary Types
 
-- Others, class. Contains the brand of the smarthphone and the carmaker of the user, and whether the sport that a user plays.
+- Others, class. Contains the brand of the smarthphone and the carmaker of the user.
 - SalaryPerHour, class. Computes the salary per hour of a user.
 - Socialclass, enumerated. Contains the social class of a user based on the salary that he makes. Can take the following values: LOWER, WORKING, MIDDLE, UPPER
 
