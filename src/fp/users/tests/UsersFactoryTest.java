@@ -43,7 +43,7 @@ public class UsersFactoryTest {
 	public static final String ANSI_RESET = "\u001B[0m";
 		
 	private static void testGetUsers(Users us) {
-		String msg = String.format("There are %d registers in the database.\n", us.getSize());
+		String msg = String.format("There are '%d' registers in the database.\n", us.getSize());
 		System.out.println(msg + "\nThe three first elements are:");
 		us.getUsers().stream()
 			.limit(3).
