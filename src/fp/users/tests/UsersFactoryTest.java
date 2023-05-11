@@ -16,19 +16,19 @@ public class UsersFactoryTest {
 		testUsersWithIncome(us, 3200);
 		testSavingsTotal(us);
 		testAverageIncomePerCountry(us, "Spain");
-		testUsersCountryWithMoreSavingsThan(us, 98000, "Spain");
+		testUsersCountryWithMoreSavingsThan(us, 3000, "Spain");
 		testUserMortgage(us, "Germany");
-		//Uncomment testUsersMaritalStatus(us, SocialClass.MIDDLE);
+		testUsersMaritalStatus(us, SocialClass.MIDDLE);
 		testCountriesSocialClass(us);
-		testCountriesIncomeRange(us, 7000);
+		testCountriesIncomeRange(us, 2000);
 		testCheckUsernameStream(us, "klkmloko");
 		testOlderThanStream(us, 26);
-		testUsersWithIncomeStream(us, 3500);
+		testUsersWithIncomeStream(us, 3000);
 		testSavingsTotalStream(us);
 		testAverageSavingsAge(us);
-		testUsersCountryWithMoreSavingsThanStream(us, 90000, "Germany");
-		//Uncomment testUserMortgageStream(us, "Spain");
-		testGreaterSalaryCountry(us, "France");
+		testUsersCountryWithMoreSavingsThanStream(us, 3000, "Germany");
+		//UNCOMMENT TO TEST testUserMortgageStream(us, "Spain");
+		testGreaterSalaryCountry(us, "Germany");
 		testWorkclassList(us, "Private");
 		testUsersMaritalStatusStream(us, SocialClass.LOWER);
 		testAverageSalariesByEducation(us);
@@ -176,7 +176,7 @@ public class UsersFactoryTest {
 		}
 	
 	private static void testUsersWithIncomeStream(Users us,Integer income) {
-		System.out.println(ANSI_YELLOW +"\npeopleWithGreaterIncomeStream TEST"+ANSI_RESET);
+		System.out.println(ANSI_YELLOW +"\nusersWithIncomeStream TEST"+ANSI_RESET);
 		try {
 			System.out.println("The number of users having an income greater than " + income + " is " + 	
 					us.peopleWithGreaterIncomeStream(income));

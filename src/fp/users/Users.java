@@ -323,7 +323,7 @@ public class Users {
 	                     x -> x.map(User::getSalary).orElse(0)))));
 	}
 	
-	//Returns a sorted map that shows the youngest users paying or not paying a mortgage
+	//Returns a sorted map that shows the n youngest users paying or not paying a mortgage
 	public SortedMap<Boolean, List<String>> youngestUsersMortgage(Integer n) {
 	    return Users.stream()
 	            .sorted(Comparator.comparingInt(User::getAge))

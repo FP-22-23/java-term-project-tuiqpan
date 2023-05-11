@@ -29,7 +29,7 @@ public class UsersFactory {
 		String[] values = line.split(";");
 		String username = values[0].trim();
 		String country = values[1].trim();
-		LocalDate dateOfBirth = LocalDate.parse(values[2].trim(), DateTimeFormatter.ofPattern("M/d/yyyy"));
+		LocalDate dateOfBirth = LocalDate.parse(values[2].trim(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 		String workclass = values[3].trim();
 		String education = values[4].trim();
 		String maritalStatus = values[5].trim();

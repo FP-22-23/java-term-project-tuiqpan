@@ -33,7 +33,7 @@ public class UsersTest {
 		
 		//We test some getters and setters
 		
-		System.out.println(ANSI_YELLOW + "\nGETTERS AND SETTERS TEST\n" +ANSI_RESET +"The salary per hour of the user " + a1.getUsername() + " is " + salaryPerHour1.getIncomePerHour()+ "€");
+		System.out.println(ANSI_YELLOW + "\nGETTERS AND SETTERS TEST\n" +ANSI_RESET +"The salary per hour of the user " + a1.getUsername() + " is " + salaryPerHour1.getIncomePerHour());
 		
 		a2.setMortgage(true);
 		System.out.println("Is the user " + a2.getUsername() + " paying a mortgage?  " + a2.getMortgage());

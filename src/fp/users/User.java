@@ -24,7 +24,7 @@ public class User implements Comparable<User>{
 
 		Checkers.check("Savings must be more than 0$", savings>0);
 		Checkers.check("The date of birth must be after (1960, 1, 1) and before (2000, 1, 1)", 
-				dateOfBirth.isAfter(LocalDate.of(1960, 1, 1)) && dateOfBirth.isBefore(LocalDate.of(2000, 1, 1)));
+				dateOfBirth.isAfter(LocalDate.of(1959, 12, 31)) && dateOfBirth.isBefore(LocalDate.of(2000, 1, 1)));
 		
 		this.username = username;
 		this.dateOfBirth = dateOfBirth;
@@ -44,7 +44,7 @@ public class User implements Comparable<User>{
 
 		Checkers.check("Savings must be more than 0$", savings>0);
 		Checkers.check("The date of birth must be after (1960, 1, 1) and before (2000, 1, 1)",
-				dateOfBirth.isAfter(LocalDate.of(1960, 1, 1)) && dateOfBirth.isBefore(LocalDate.of(2000, 1, 1)));
+				dateOfBirth.isAfter(LocalDate.of(1960, 1, 1)) && dateOfBirth.isBefore(LocalDate.of(1999, 12, 31)));
 		
 		
 		this.username = username;
@@ -67,7 +67,7 @@ public class User implements Comparable<User>{
 	public String toString() {
 		return "User [Username="+username+", Age=" + getAge() + ", Workclass=" + workclass + ", Education=" + education + ", MaritalStatus=" + maritalStatus
 				+ ", Sex=" + sex + ", Country=" + country + ", Savings=" + savings +
-				", Salary=" + salary +  ", "+ salaryPerHour + ", Mortgage=" + mortgage+ ", Others=" + others + ", Social class= " + getSocialClass()+ "]" ;
+				", Salary=" + salary +  ", "+ salaryPerHour + ", Mortgage=" + mortgage+ ", Others=" + others + " Social class= " + getSocialClass()+ "]" ;
 	}
 	
 	
@@ -175,10 +175,10 @@ public class User implements Comparable<User>{
 	}
 	
 	public SocialClass getSocialClass() {
-		if(getSalary()<500) {
+		if(getSalary()<1000) {
 			return SocialClass.LOWER;
 		}
-		else if (getSalary()<1300) {
+		else if (getSalary()<1600) {
 			return SocialClass.WORKING;
 		}
 		else if (getSalary()<2000) {
