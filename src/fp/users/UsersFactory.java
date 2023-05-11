@@ -1,24 +1,23 @@
-package fp.adults;
+package fp.users;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Vector;
 import java.util.stream.Stream;
 
-import fp.utils.Checkers;
 
-public class AdultFactory {
+public class UsersFactory {
 	
-	public static Adults readAdults(String fileName) {
-			Adults res = null;
+	public static Users readUsers(String fileName) {
+			Users res = null;
 			
 			try {
-				Stream<Adult> ad = Files.lines(Paths.get(fileName)).skip(1).map(AdultFactory::parseLine);
-				res = new Adults(ad);
+				Stream<User> ad = Files.lines(Paths.get(fileName)).skip(1).map(UsersFactory::parseLine);
+				res = new Users(ad);
 			}catch(IOException e) {
 				System.out.println("*******ERROR WITH THE FILE " + fileName + " ********");
 			}
@@ -26,8 +25,7 @@ public class AdultFactory {
 	}
 	
 	
-	
-	public static Adult parseLine(String line){
+	public static User parseLine(String line){
 		String[] values = line.split(";");
 		String username = values[0].trim();
 		String country = values[1].trim();
@@ -40,26 +38,21 @@ public class AdultFactory {
 		Integer savings = Integer.valueOf(values[8].trim());
 		Integer salary = Integer.valueOf(values[9].trim());
 		Boolean mortgage = Boolean.valueOf(values[10].trim());
-		List<Others> others = parseOthers(values[11]);
+		List<String> others = parseOthers(values[11]);
 		SalaryPerHour salaryPerHour = new SalaryPerHour(salary, hours);
 		
-		return new Adult(username, dateOfBirth, workclass, education, maritalStatus, sex, country, mortgage, savings, salary, salaryPerHour, others);
+		return new User(username, dateOfBirth, workclass, education, maritalStatus, sex, country, mortgage, savings, salary, salaryPerHour, others);
 	}
 
-	private static List<Others> parseOthers(String oth){
-		String[] res = oth.split(";");
-		List<Others> otros = new Vector<>();
-		for(String s:res) {
-			otros.add(parseOther(s));
-		}
-		return otros;
-	}
-
-	private static Others parseOther(String oth) {
+	private static List<String> parseOthers(String oth){
 		String[] res = oth.split(",");
-		String smartphone = res[0].trim();
-		String car = res[1].trim();
-		return new Others(smartphone, car);
+		List<String> resa = new ArrayList<>();
+		for(String s:res) {
+			resa.add(s);
+		}
+		return resa;
 	}
+
+
 	
 }

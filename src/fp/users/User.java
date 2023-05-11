@@ -1,4 +1,4 @@
-package fp.adults;
+package fp.users;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Objects;
 
 import fp.utils.Checkers;
 
-public class Adult implements Comparable<Adult>{
+public class User implements Comparable<User>{
 	
 	
 	//ATTRIBUTES
@@ -14,13 +14,13 @@ public class Adult implements Comparable<Adult>{
 	private String  username, workclass, education, maritalStatus, sex, country ;
 	private Integer savings, salary;
 	private Boolean mortgage;
-	private List<Others> others;
+	private List<String> others;
 	private SalaryPerHour salaryPerHour;
 	
 	
 	//CONSTRUCTORS
-	public Adult(String username, LocalDate dateOfBirth, String workclass, String education, String maritalStatus, String sex, String country,
-			Boolean mortgage, Integer savings, Integer salary, SalaryPerHour salaryPerHour, List<Others> others) {
+	public User(String username, LocalDate dateOfBirth, String workclass, String education, String maritalStatus, String sex, String country,
+			Boolean mortgage, Integer savings, Integer salary, SalaryPerHour salaryPerHour, List<String> others) {
 
 		Checkers.check("Savings must be more than 0$", savings>0);
 		Checkers.check("The date of birth must be after (1960, 1, 1) and before (2000, 1, 1)", 
@@ -40,7 +40,7 @@ public class Adult implements Comparable<Adult>{
 		this.others = others;
 	}
 
-	public Adult(String username,LocalDate dateOfBirth, Integer savings, Integer salary, SalaryPerHour salaryPerHour ) {
+	public User(String username,LocalDate dateOfBirth, Integer savings, Integer salary, SalaryPerHour salaryPerHour ) {
 
 		Checkers.check("Savings must be more than 0$", savings>0);
 		Checkers.check("The date of birth must be after (1960, 1, 1) and before (2000, 1, 1)",
@@ -65,9 +65,9 @@ public class Adult implements Comparable<Adult>{
 	//TOSTRING
 	@Override
 	public String toString() {
-		return "Adult [Username="+username+", Age=" + getAge() + ", Workclass=" + workclass + ", Education=" + education + ", MaritalStatus=" + maritalStatus
+		return "User [Username="+username+", Age=" + getAge() + ", Workclass=" + workclass + ", Education=" + education + ", MaritalStatus=" + maritalStatus
 				+ ", Sex=" + sex + ", Country=" + country + ", Savings=" + savings +
-				", Salary=" + salary +  ", "+ salaryPerHour + ", Mortgage=" + mortgage+ ", Others=" + others + " Social class= " + getSocialClass()+ "]" ;
+				", Salary=" + salary +  ", "+ salaryPerHour + ", Mortgage=" + mortgage+ ", Others=" + others + ", Social class= " + getSocialClass()+ "]" ;
 	}
 	
 	
@@ -152,11 +152,11 @@ public class Adult implements Comparable<Adult>{
 		this.mortgage = mortgage;
 	}
 
-	public List<Others> getOthers() {
+	public List<String> getOthers() {
 		return others;
 	}
 
-	public void setOthers(List<Others> others) {
+	public void setOthers(List<String> others) {
 		this.others = others;
 	}
 
@@ -200,16 +200,16 @@ public class Adult implements Comparable<Adult>{
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!(obj instanceof Adult))
+		if (!(obj instanceof User))
 			return false;
-		Adult other = (Adult) obj;
+		User other = (User) obj;
 		return Objects.equals(country, other.country) && Objects.equals(dateOfBirth, other.dateOfBirth)
 				&& Objects.equals(education, other.education) && Objects.equals(sex, other.sex);
 	}
 	
 
 	//COMPARE TO AND NATURAL ORDER
-	public int compareTo(Adult s) {
+	public int compareTo(User s) {
 		int res = 0;
 		if(res==0) {
 			res = this.getSalary().compareTo(s.getSalary());

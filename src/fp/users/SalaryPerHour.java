@@ -1,4 +1,4 @@
-package fp.adults;
+package fp.users;
 
 import fp.utils.Checkers;
 
@@ -11,7 +11,7 @@ public class SalaryPerHour implements Comparable<SalaryPerHour>{
 	
 	private Integer salary;
 	private Double hours;
-	
+
 	
 	//CONSTRUCTORS
 	

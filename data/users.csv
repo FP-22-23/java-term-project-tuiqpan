@@ -19,15 +19,15 @@ gbortolig;Italy;11/22/1978;Self Employed;High School;Married; Male;31;4769;1032;
 edeboyh;Portugal;06/08/1977;Unknown;High School;Married; Male;34,5;8574;1357;true;iPhone, Audi
 cplayfordi;France;04/09/1973;Private;High School;Married; Male;16,5;9669;919;false;iPhone, Others
 lleechmanj;Portugal;7/16/1989;Unknown;Doctorate;Never Married; Female;22,5;6364;1243;false;Iphone, Non
-dbeerk;Spain;3/21/1971;Private;Doctorate;Married; Male;25;3971;996;true;iPhone, Others
+dbeerk;Spain;3/21/1971;Private;Doctorate;Married; Male;25;8676;996;true;iPhone, Others
 btunnyl;Portugal;3/15/1986;Self Employed;Bachelors;Divorced; Female;39,5;6291;648;false;iPhone, Seat
 vpudenm;Germany;9/13/1977;Public;Bachelors;Separated; Male;28,5;5321;920;false;Others, Honda
 btresloven;Portugal;08/02/1983;Private;Doctorate;Married; Male;21,5;5710;1272;false;iPhone, Others
 bvautino;Germany;3/15/1988;Public;Bachelors;Never Married; Female;24,5;23694;2113;true;iPhone, Seat
 clawleffp;Germany;11/03/1982;Unknown;High School;Married; Male;38;8967;810;true;iPhone, Non
-ebricknerq;Germany;8/17/1980;Self Employed;Bachelors;Married; Male;36;30812;3537;false;iPhone, Others
+ebricknerq;Germany;8/17/1980;Self Employed;Bachelors;Married; Male;36;7906;3537;false;iPhone, Others
 bbrunigesr;Portugal;08/07/1979;Self Employed;High School;Divorced; Male;17;9358;1353;true;iPhone, Ford
-mleckys;France;04/11/1976;Unknown;Bachelors;Married; Male;36,5;86260;5245;true;Iphone, Volkswagen
+mleckys;France;04/11/1976;Unknown;Bachelors;Married; Male;36,5;3569;5245;true;Iphone, Volkswagen
 laxcellt;Italy;11/24/1977;Self Employed;Bachelors;Married; Male;35,5;3039;576;true;iPhone, Others
 gloughlanu;France;05/04/1983;Public;Masters;Married; Male;37,5;5886;1211;false;Samsung, Others
 drasellesv;Spain;12/15/1984;Public;Doctorate;Separated; Male;29;5916;1833;false;Iphone, Honda
@@ -40,8 +40,8 @@ tbissatt11;Germany;1/20/1985;Private;High School;Married; Female;20;8354;1010;tr
 fsyddall12;Germany;5/24/1977;Private;Bachelors;Married; Male;18;7584;1207;false;iPhone, Non
 akruszelnicki13;Germany;9/26/1990;Private;High School;Married; Male;35;8863;853;false;Iphone, Honda
 mtanswell14;Italy;02/07/1985;Private;High School;Married; Male;35;9605;860;false;iPhone, Others
-mridgedell15;Spain;07/06/1974;Private;High School;Never Married; Male;38,5;37873;2248;true;Others, Others
-rartinstall16;Germany;4/26/1986;Public;High School;Married; Male;30;70971;4600;true;Iphone, Volkswagen
+mridgedell15;Spain;07/06/1974;Private;High School;Never Married; Male;38,5;2568;2248;true;Others, Others
+rartinstall16;Germany;4/26/1986;Public;High School;Married; Male;30;3554;4600;true;Iphone, Volkswagen
 rcorday17;Spain;08/03/1975;Private;Bachelors;Married; Female;30;6591;1284;false;iPhone, Ford
 agiscken18;France;06/06/1989;Unknown;Bachelors;Separated; Male;25;8510;1119;false;Iphone, BMW
 rmillington19;Portugal;01/07/1988;Public;Bachelors;Married; Male;23,5;9395;1343;false;Samsung, Others
@@ -52,7 +52,7 @@ salyukin1d;France;3/15/1987;Self Employed;Bachelors;Married; Male;28,5;5533;903;
 dwhitham1e;Germany;7/26/1973;Public;Masters;Divorced; Female;30,5;3545;799;false;iPhone, Honda
 dmaccaughen1f;Spain;4/15/1976;Unknown;Bachelors;Married; Female;27;8933;1706;false;iPhone, Non
 crein1g;Germany;7/22/1987;Private;High School;Married; Female;19;4526;540;true;iPhone, BMW
-osandall1h;Germany;2/22/1987;Public;Bachelors;Separated; Male;39,5;43529;2525;false;iPhone, Ford
+osandall1h;Germany;2/22/1987;Public;Bachelors;Separated; Male;39,5;3567;2525;false;iPhone, Ford
 bjahn1i;Germany;1/21/1989;Unknown;Doctorate;Separated; Male;39,5;7089;1090;false;iPhone, Honda
 hgrzeszczyk1j;Germany;06/04/1971;Self Employed;Doctorate;Married; Male;37,5;5745;1924;true;Iphone, Others
 mdayes1k;Portugal;4/29/1989;Self Employed;High School;Married; Male;34;8587;1630;false;Samsung, Honda
@@ -132,7 +132,7 @@ nmengue3l;Germany;10/16/1970;Private;High School;Married; Male;38;7716;1318;true
 ebrickner3m;France;02/03/1979;Public;Bachelors;Married; Female;23,5;3342;1773;false;iPhone, Others
 lellett3n;Italy;9/29/1976;Unknown;Bachelors;Married; Female;25;3911;723;true;iPhone, Others
 mburgess3o;France;4/24/1988;Unknown;High School;Married; Male;29;9056;916;false;iPhone, Non
-nidell3p;Italy;9/26/1971;Self Employed;Bachelors;Divorced; Male;34,5;5824;1565;true;Samsung, Honda
+nidell3p;Italy;9/26/1992;Self Employed;Bachelors;Divorced; Male;34,5;5824;1565;true;Samsung, Honda
 lroget3q;Italy;05/04/1983;Public;Bachelors;Married; Female;11;6482;480;true;Samsung, Volkswagen
 rondrich3r;France;3/25/1981;Public;High School;Married; Male;7,5;3677;450;false;Samsung, BMW
 cnappin3s;Spain;02/06/1977;Private;High School;Married; Male;39,5;4402;1064;false;Samsung, Ford
@@ -224,7 +224,7 @@ logleasane65;Portugal;12/18/1972;Self Employed;Bachelors;Married; Male;28,5;6075
 mstansall66;Spain;05/06/1970;Unknown;Bachelors;Married; Male;24;32910;5197;false;Others, Others
 lmongenot67;France;12/24/1980;Public;Masters;Married; Male;40;8717;1389;true;iPhone, Audi
 lcappell68;Spain;03/08/1986;Self Employed;Bachelors;Divorced; Female;17;3481;1319;false;Iphone, Others
-kcaldes69;Germany;4/29/1982;Unknown;High School;Married; Female;32,5;9498;1352;false;Iphone, Seat
+kcaldes69;Germany;4/29/1982;Unknown;4456;Married; Female;32,5;9498;1352;false;Iphone, Seat
 rboyford6a;Portugal;03/01/1986;Public;High School;Married; Female;22,5;34981;5332;true;Others, Others
 sfeeney6b;Spain;5/30/1971;Self Employed;Bachelors;Married; Male;22,5;7746;1956;true;Iphone, Honda
 jhatliffe6c;Portugal;3/22/1979;Private;Bachelors;Married; Female;19,5;7321;1505;true;Others, Non
@@ -254,7 +254,7 @@ ppettko6z;Spain;02/12/1977;Public;Masters;Married; Female;18,5;13985;660;true;iP
 ehutsby70;Spain;5/17/1973;Private;Bachelors;Married; Female;39,5;9564;1288;false;iPhone, Others
 coldred71;France;11/09/1975;Public;Bachelors;Separated; Male;35;4335;590;false;Iphone, Non
 ctroucher72;France;4/19/1989;Unknown;High School;Married; Male;19;8245;707;true;iPhone, Audi
-mjoutapavicius73;France;5/19/1975;Unknown;Doctorate;Married; Male;28,5;38218;6435;false;Iphone, Others
+mjoutapavicius73;France;5/19/1975;Unknown;Doctorate;Married; Male;28,5;6747;6435;false;Iphone, Others
 rloynton74;Spain;8/20/1987;Public;Masters;Never Married; Female;22,5;9255;1331;false;Iphone, Audi
 dlocks75;Portugal;5/31/1989;Unknown;High School;Married; Female;27;7544;882;false;Others, Seat
 fbarford76;Germany;09/02/1987;Unknown;Masters;Married; Female;23,5;4855;939;false;iPhone, Others
@@ -325,7 +325,7 @@ gthain8y;Portugal;04/04/1973;Unknown;Bachelors;Married; Male;25,5;3398;1676;fals
 jkaasmann8z;France;10/18/1971;Self Employed;Masters;Married; Female;17,5;5537;1525;true;Iphone, Others
 agribbin90;Portugal;9/14/1975;Private;Bachelors;Separated; Male;29,5;6401;1497;false;Others, Others
 cbaudi91;Spain;5/18/1977;Private;High School;Married; Male;36,5;9412;1585;false;Others, Others
-uairey92;Germany;07/06/1990;Self Employed;High School;Divorced; Female;29;84693;2804;true;iPhone, BMW
+uairey92;Germany;07/06/1993;Self Employed;High School;Divorced; Female;29;84693;2804;true;iPhone, BMW
 lcurtois93;Spain;7/28/1974;Unknown;Doctorate;Married; Female;17;6244;1010;true;Iphone, Volkswagen
 rsergant94;France;09/11/1979;Unknown;Masters;Divorced; Male;17;5924;387;true;iPhone, Others
 loduilleain95;Germany;2/28/1971;Public;Bachelors;Married; Male;29;5141;797;true;iPhone, Honda
