@@ -15,7 +15,7 @@ public class UsersFactoryTest {
 		testOlderThan(us, 32);
 		testUsersWithIncome(us, 3200);
 		testSavingsTotal(us);
-		testAverageIncomePerCountry(us, "Spain");
+		testAverageIncomePerHour(us, "Spain");
 		testUsersCountryWithMoreSavingsThan(us, 3000, "Spain");
 		testUserMortgage(us, "Germany");
 		testUsersMaritalStatus(us, SocialClass.MIDDLE);
@@ -91,10 +91,10 @@ public class UsersFactoryTest {
 			}
 		}
 	
-	private static void testAverageIncomePerCountry(Users us, String country) {	
-		System.out.println(ANSI_YELLOW +"\naverageIncomePerCountry TEST"+ANSI_RESET);
+	private static void testAverageIncomePerHour(Users us, String country) {	
+		System.out.println(ANSI_YELLOW +"\naverageIncomePerHour TEST"+ANSI_RESET);
 		try {
-			System.out.println("The average income in " + country + " is " + us.averageIncomePerCountry(country));
+			System.out.println("The average income per hour in " + country + " is " + us.averageIncomePerHour(country));
 			}
 		catch (Exception e) {
 			System.out.println(("Unexpected exception caught:\n " + e));

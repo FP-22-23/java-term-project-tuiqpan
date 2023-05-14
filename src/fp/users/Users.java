@@ -124,18 +124,19 @@ public class Users {
 	return res;
 	}
 	
-	//Compute the average income of the users in the database in a given country
-	public Integer averageIncomePerCountry(String country) {
-	    Integer res = 0;
-	    Integer count = 0;
+	//Compute the average income of the users per hour in a given country
+	public long averageIncomePerHour(String country) {
+		Double res = 0.0;
+		Double count = 0.0;
 	    for(User a: Users) {
 	        if(a.getCountry().equalsIgnoreCase(country)) {
-	            res += a.getSalary();
+	            res += a.getSalaryPerHour().getIncomePerHour();
 	            count++;
 	        }
 	    }
 	    return Math.round(res/count);
 	}
+	
 	
 	//Creates a list with the users from a certain country having more savings than a given number
 	public List<String> usersCountryWithMoreSavingsThan(Integer savings, String country){
