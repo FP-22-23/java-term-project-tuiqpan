@@ -13,7 +13,7 @@ Author: Ionel Tudor Cristian Lacatus   uvus:HPD8118
 ## *Structure of the DATASET*
 This dataset is intended for comprehensive analysis of information that has been collected through an online form created by the European Union, specifically with the aim of analyzing financial data of citizens. 
 The original dataset can be found in the following link -> "https://www.kaggle.com/datasets/overload10/adult-census-dataset".
-This dataset has 12 columns and 32562 rows, also, the dataset was modified in order to add a wider variety of parameters, and to delete some irrelevant data. Now, we will describe each column:
+This dataset has 12 columns and 12689 rows, also, the dataset was modified in order to add a wider variety of parameters, and to delete some irrelevant data. Now, we will describe each column:
 
 * **username**: of type string, indicates the username of an user
 * **country**: of type string, indicates the country of an user
