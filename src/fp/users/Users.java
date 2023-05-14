@@ -137,7 +137,6 @@ public class Users {
 	    return Math.round(res/count);
 	}
 	
-	
 	//Creates a list with the users from a certain country having more savings than a given number
 	public List<String> usersCountryWithMoreSavingsThan(Integer savings, String country){
 		List<String> res = new ArrayList<>();
