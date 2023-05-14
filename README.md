@@ -38,26 +38,26 @@ Base type
 **Properties**:
 
 - _dateOfBirth_, of type Date, consultable and modifiable.
-- _workclass_, _username_, _education_, _maritalStatus_, _sex_, of type String, consultable and modifiable.
-- _savings_, _salary_ of type Integer, consultable and modifiable.
-- _others_, of type List<String>, consultable and modifiable.
-- _mortgage_, of type Boolean, consultable and modifiable.
-- _salaryPerHour_, of type SalaryPerHour, consultable and modifiable. Indicates the salary per hour of a user.
+- _workclass_, _username_, _education_, _maritalStatus_, _sex_, of type String, consultable and modifiable
+- _savings_, _salary_ of type Integer, consultable and modifiable
+- _others_, of type List<String>, consultable and modifiable
+- _mortgage_, of type Boolean, consultable and modifiable
+- _salaryPerHour_, of type SalaryPerHour, consultable and modifiable. Indicates the salary per hour of a user
 
 **Constructors**: 
 
-- C1: Has a parameter for every basic property.
-- C2: Creates an object of type ```User``` from the following parameters: ```String a, LocalDate b, String c, String d, String e, String f, Bollean g Integer h, Integer i, Integer j, SalaryPerHour k, List<String> l```.
+- C1: Has a parameter for every basic property
+- C2: Creates an object of type ```User``` from the following parameters: ```String a, LocalDate b, String c, String d, String e, String f, Bollean g Integer h, Integer i, Integer j, SalaryPerHour k, List<String> l```
 
 **Restrictions**:
  
 - R1: The savings must be more than 0$.
-- R2: The date of birth must be after (1960, 1, 1) and before (2000, 1, 1).
+- R2: The date of birth must be after (1960, 1, 1) and before (2000, 1, 1)
 
 **Equality and Ordenation**
 
-* ***Equality criterion***: Two users are the same if they have they have all the properties.
-* ***Natural order***: By salary and savings.
+* ***Equality criterion***: Two users are the same if they have they have all the properties
+* ***Natural order***: By salary and savings
 
 **Other operations**:
 
@@ -66,8 +66,8 @@ Base type
 
 #### Auxiliary Types
 
-- Others, class. Contains the brand of the smarthphone and the carmaker of the user.
-- SalaryPerHour, class. Computes the salary per hour of a user.
+- Others, class. Contains the brand of the smarthphone and the carmaker of the user
+- SalaryPerHour, class. Computes the salary per hour of a user
 - Socialclass, enumerated. Contains the social class of a user based on the salary that he makes. Can take the following values: LOWER, WORKING, MIDDLE, UPPER
 
  
@@ -86,20 +86,20 @@ Container type of objects of type User.
 
 **Constructors**: 
 
-- C1: Creates an object of type ```Users``` from a stream.
-- C2: Creates an object of type ```Users``` from a collection.
-- C3: Constructor by default. Creates an empty collection.
+- C1: Creates an object of type ```Users``` from a stream
+- C2: Creates an object of type ```Users``` from a collection
+- C3: Constructor by default. Creates an empty collection
 
 **Equality criterion**
 
 Two users are the same if all their attributes are the same
 
 **Other methods**:
-- _Integer getUsers()_: Return the number of users in the database.
-- _List<Adult> getUsers()_: Gets all the registers.
-- _void add(User user)_: Adds an user to the database.
-- _void remove(User user)_: Remove an user from the database.
-- _String toString()_: Auto-generated toString.
+- _Integer getUsers()_: Return the number of users in the database
+- _List<Adult> getUsers()_: Gets all the registers
+- _void add(User user)_: Adds an user to the database
+- _void remove(User user)_: Remove an user from the database
+- _String toString()_: Auto-generated toString
 - _Boolean checkUsername(String username)_:Checks if exists a certain username in the database
 - _Boolean olderThan(Integer age)_: Checks if all users in the list are older than the given age
 - _Integer peopleWithGreaterIncome(Integer income)_: Counts how many users have an income greater than the given value
