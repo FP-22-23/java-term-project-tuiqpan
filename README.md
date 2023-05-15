@@ -66,7 +66,6 @@ Base type
 
 #### Auxiliary Types
 
-- Others, class. Contains the brand of the smarthphone and the carmaker of the user
 - SalaryPerHour, class. Computes the salary per hour of a user
 - Socialclass, enumerated. Contains the social class of a user based on the salary that he makes. Can take the following values: LOWER, WORKING, MIDDLE, UPPER
 
